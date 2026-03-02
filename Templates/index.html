@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <nav class="navbar">
+    <div class="logo">🎓 StudentMS</div>
+    <ul class="nav-links">
+        <li><a href="/">➕ Add Student</a></li>
+        <li><a href="/view">📁 View Students</a></li>
+    </ul>
+</nav>
+
+    <h1>Student Registration Form</h1>
+
+    <form method="POST" action="/">
+        <label>Name:</label><br>
+        <input type="text" name="name" placeholder="Enter student name"><br><br>
+
+        <label>Age:</label><br>
+        <input type="number" name="age" placeholder="Enter age"><br><br>
+
+        <label>Course:</label><br>
+        <input type="text" name="course" placeholder="Enter course"><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <br>
+
+
+</body>
+</html>

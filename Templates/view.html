@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Students</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <nav class="navbar">
+    <div class="logo">🎓 StudentMS</div>
+    <ul class="nav-links">
+        <li><a href="/">➕ Add Student</a></li>
+        <li><a href="/view">📁 View Students</a></li>
+    </ul>
+</nav>
+
+    <h1>Student List</h1>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Course</th>
+            <th>Modify</th>
+        </tr>
+        {% for student in students %}
+        <tr>
+            <td>{{student[0]}}</td>
+            <td>{{student[1]}}</td>
+            <td>{{student[2]}}</td>
+            <td>{{student[3]}}</td>
+            <td>
+                <a href="/edit/{{student[0]}}">Edit</a>
+                <a href="/delete/{{student[0]}}">Delete</a>
+            </td>
+        </tr>
+         {% endfor%}
+    </table>
+
+    <br>
+    
+
+
+</body>
+</html>
